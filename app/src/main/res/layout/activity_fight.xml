@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FightActivity"
+    android:orientation="horizontal"
+    android:background="#3E3B3B">
+
+    <TextView
+        android:id="@+id/nameOfEnemy"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="32dp"
+        android:textColor="@color/teal_700"/>
+    <TextView
+        android:id="@+id/hpOfEnemy"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="28dp"
+        android:textColor="@color/teal_700"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fight_table_layout">
+        <TableRow>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_1s_4e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_2s_4e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_3s_4e"/>
+
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_1s_3e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_2s_3e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_3s_3e"/>
+
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_1s_2e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_2s_2e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_3s_2e"/>
+
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_1s_1e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_2s_1e"/>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/fight_3s_1e"/>
+
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/nameOfPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="32dp"
+        android:textColor="@color/teal_700"/>
+    <TextView
+        android:id="@+id/hpOfPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="28dp"
+        android:textColor="@color/teal_700"/>
+
+
+
+
+
+</LinearLayout>
