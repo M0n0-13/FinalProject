@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.finalproject.ierarchy.Cards;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
                  double usualTimeChange*/
         /*Cards knight = new Cards("Knight",
                 "Usual meelie fighter with sword!",1, "meelie",
-                5,1000,3,,300,75);*/
+                5,1000,3,300,75);*/
+        //base cards:
+
 
 
 
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         startFight.setEnabled(false);
         changeDeck.setEnabled(false);
 
+
         setName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,8 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
                 }else{
                     UsersName =  inUsersName.getText().toString();
+                    /*changeDeck.setEnabled(true);*/
                     startFight.setEnabled(true);
-                    changeDeck.setEnabled(true);
+                    setName.setVisibility(View.INVISIBLE);
                     setName.setEnabled(false);
                     inUsersName.setEnabled(false);
                     Toast.makeText(getApplicationContext(),"Your nickname has been approved",Toast.LENGTH_SHORT).show();
