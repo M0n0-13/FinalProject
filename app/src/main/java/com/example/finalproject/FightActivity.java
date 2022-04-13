@@ -18,8 +18,8 @@ import java.util.Random;
 public class FightActivity extends AppCompatActivity {
     public int chosenColumn = -1;
 
-    int botsHP = 10000;
-    int playersHP = 10000;
+    int botsHP = 4000;
+    int playersHP = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -333,7 +333,7 @@ public class FightActivity extends AppCompatActivity {
                         }
                         if(numberOfEnemyUnitsOnLine==0&&wasSpawned==false){
 
-                            wasSpawned=true;
+
                             cardsField[i][3]=new Cards(knight, false);
                             fightField[i][3].setImageResource(R.drawable.mellie_e);
                         }
@@ -634,7 +634,7 @@ public class FightActivity extends AppCompatActivity {
             7,1000,4,300,10,true, false);
     Cards fireball = new Cards("Fire Sharp",
             "the most usual line from fire, what can make good carry ",3, "magic",
-            2,1,1,1700,0,true);
+            2,1,1,2250,0,true);
     Cards barricade = new Cards("Barricade",
             "barricade can stop enemies",4, "barricade",
             2,3000,1,1,0,true);
