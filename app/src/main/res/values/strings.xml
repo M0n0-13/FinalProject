@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Time Masters</string>
     <string name="set_Users_name">set Your name</string>
+    <string name="title_activity_tips">TipsActivity</string>
+    <string name="about_game">Hello, User! My name is Yura, main programmer of this game.I want to tell you about your task. Your main task is kill your enemy i.e. his hp must down under than 0. To do it you must place cards on the field. To activate that cards you need to push: transmit move
+</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

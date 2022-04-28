@@ -5,10 +5,16 @@
       <map>
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.1" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_deck.xml" value="0.1" />
-        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_fight.xml" value="0.1" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_end_of_the_game.xml" value="0.25" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_fight.xml" value="0.165" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/activity_tips.xml" value="0.25" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/content_scrolling.xml" value="0.1" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/layout/fight_activity.xml" value="0.1" />
+        <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/menu/menu_tips.xml" value="0.25" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/urijs/AndroidStudioProjects/FinalProject2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>

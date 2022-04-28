@@ -1,188 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FightActivity"
+
+    android:background="#373E3E"
     android:orientation="vertical"
-    android:background="#3E3B3B">
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-
-            android:id="@+id/nameOfEnemy"
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:text=""
-            android:textSize="32dp"
-            android:textColor="@color/teal_700"/>
-
-        <Button
-            android:id="@+id/transmitMove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:text="transmit move"
-            android:backgroundTint="#FF9800"
-            android:textColor="@color/black"/>
+    tools:context=".FightActivity">
 
 
-    </GridLayout>
+    <Button
+        android:id="@+id/transmitMove"
+        android:layout_width="135dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#FF9800"
+        android:text="transmit move"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+
+        android:id="@+id/nameOfEnemy"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/teal_700"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/transmitMove"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hpOfEnemy"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
+        android:layout_width="154dp"
+        android:layout_height="35dp"
 
+        android:layout_marginStart="44dp"
         android:text=""
+        android:textColor="@color/teal_700"
         android:textSize="28dp"
-        android:textColor="@color/teal_700"/>
+        app:layout_constraintEnd_toStartOf="@+id/transmitMove"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameOfEnemy" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fight_table_layout"
-        android:layout_gravity="center_vertical"
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="235dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transmitMove">
+
+        <ImageView
+            android:id="@+id/fight_1s_4e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw"
+
+            />
+
+        <ImageView
+            android:id="@+id/fight_2s_4e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+        <ImageView
+            android:id="@+id/fight_3s_4e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="235dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow4">
+
+        <ImageView
+            android:id="@+id/fight_1s_3e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+        <ImageView
+            android:id="@+id/fight_2s_3e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+        <ImageView
+            android:id="@+id/fight_3s_3e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="235dp"
+        android:layout_height="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+        <ImageView
+            android:id="@+id/fight_1s_2e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+        <ImageView
+            android:id="@+id/fight_2s_2e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+        <ImageView
+            android:id="@+id/fight_3s_2e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
+
+    </TableRow>
 
 
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="235dp"
+        android:layout_height="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow5">
 
+        <ImageView
+            android:id="@+id/fight_1s_1e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
 
-        >
+        <ImageView
+            android:id="@+id/fight_2s_1e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
 
-        <TableRow android:layout_height="127dp">
+        <ImageView
+            android:id="@+id/fight_3s_1e"
+            android:layout_weight="1"
+            android:src="@drawable/without_draw" />
 
-            <ImageView
-                android:id="@+id/fight_1s_4e"
-                android:layout_width="78sp"
-                android:layout_height="103sp"
+    </TableRow>
 
-
-                />
-
-            <ImageView
-                android:id="@+id/fight_2s_4e"
-                android:layout_width="78sp"
-                android:layout_height="103sp" />
-
-            <ImageView
-                android:id="@+id/fight_3s_4e"
-                android:layout_width="78sp"
-                android:layout_height="103sp" />
-
-        </TableRow>
-
-        <TableRow android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/fight_1s_3e"
-                android:layout_width="78sp"
-                android:layout_height="103sp" />
-
-            <ImageView
-                android:id="@+id/fight_2s_3e"
-                android:layout_width="78sp"
-                android:layout_height="103sp" />
-
-            <ImageView
-                android:id="@+id/fight_3s_3e"
-                android:layout_width="78sp"
-                android:layout_height="103sp" />
-
-        </TableRow>
-        <TableRow>
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_1s_2e"
-                />
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_2s_2e"
-                />
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_3s_2e"
-                />
-
-        </TableRow>
-        <TableRow>
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_1s_1e"
-                />
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_2s_1e"
-
-                />
-            <ImageView
-                android:layout_height="103sp"
-                android:layout_width="78sp"
-                android:id="@+id/fight_3s_1e"
-                />
-
-        </TableRow>
-    </TableLayout>
     <TextView
         android:id="@+id/nameOfPlayer"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="39dp"
+        android:layout_marginStart="8dp"
         android:text=""
+        android:textColor="@color/teal_700"
         android:textSize="32dp"
-        android:textColor="@color/teal_700"/>
+        app:layout_constraintBottom_toTopOf="@+id/hpOfPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow6" />
+
     <TextView
         android:id="@+id/hpOfPlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
 
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
         android:text=""
+        android:textColor="@color/teal_700"
         android:textSize="28dp"
-        android:textColor="@color/teal_700"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameOfPlayer" />
 
-    <GridLayout
+    <TableRow
+        android:id="@+id/tableRow7"
         android:layout_width="match_parent"
-        android:layout_height="206dp"
-
-        android:orientation="horizontal"
-        >
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpOfPlayer">
 
         <ImageView
-            android:src="@drawable/mellie"
             android:id="@+id/card1"
-            android:layout_width="116dp"
+            android:layout_weight="1"
 
-            android:layout_height="90dp"   />
+            android:src="@drawable/mellie" />
 
         <ImageView
-            android:src="@drawable/wizard"
             android:id="@+id/card2"
-            android:layout_width="116dp"
+            android:layout_weight="1"
 
-            android:layout_height="90dp"  />
+            android:src="@drawable/wizard" />
 
         <ImageView
-            android:src="@drawable/barricade"
             android:id="@+id/card3"
-            android:layout_width="116dp"
-
-            android:layout_height="90dp"  />
+            android:layout_weight="1"
+            android:src="@drawable/barricade" />
 
         <ImageView
-            android:src="@drawable/magic"
             android:id="@+id/card4"
-            android:layout_width="116dp"
+            android:layout_weight="1"
+            android:src="@drawable/magic" />
+    </TableRow>
 
-            android:layout_height="90dp" />
-    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>

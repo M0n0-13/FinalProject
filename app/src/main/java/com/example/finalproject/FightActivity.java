@@ -18,12 +18,14 @@ import java.util.Random;
 public class FightActivity extends AppCompatActivity {
     public int chosenColumn = -1;
 
-    int botsHP = 4000;
-    int playersHP = 4000;
+    public static int botsHP = 4000;
+    public static int playersHP = 4000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        botsHP = 4000;
+        playersHP = 4000;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fight);
         TextView nameOfEnemy=findViewById(R.id.nameOfEnemy);
@@ -57,7 +59,8 @@ public class FightActivity extends AppCompatActivity {
         fightField[0][3] = findViewById(R.id.fight_1s_4e);
         fightField[1][3] = findViewById(R.id.fight_2s_4e);
         fightField[2][3] = findViewById(R.id.fight_3s_4e);
-        Intent toMenu = new Intent(this,MainActivity.class);
+        TextView EndMessage=findViewById(R.id.new_about_win);
+        Intent toEnd = new Intent(this,EndOfTheGameActivity.class);
         Cards cardsField[][]= new Cards[3][4];
         stopMove.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,37 +80,8 @@ public class FightActivity extends AppCompatActivity {
 
 
 
-                //EndGame checking
-                if (playersHP<=0&&botsHP>0) {
-                    Toast.makeText(getApplicationContext(),"You lose!",Toast.LENGTH_LONG).show();
-                    try {
-                        wait(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    startActivity(toMenu);
 
-                }
-                if (playersHP>0&&botsHP<=0) {
-                    Toast.makeText(getApplicationContext(),"You win!",Toast.LENGTH_LONG).show();
-                    try {
-                        wait(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    startActivity(toMenu);
 
-                }
-                if (playersHP<=0&&botsHP<=0) {
-                    Toast.makeText(getApplicationContext(),"Tie!",Toast.LENGTH_LONG).show();
-                    try {
-                        wait(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    startActivity(toMenu);
-
-                }
 
 
                 //Clean from magic symbols
@@ -192,10 +166,7 @@ public class FightActivity extends AppCompatActivity {
                                     fightField[i][j+1].setImageResource(R.drawable.without_draw);
                                 }
                             }
-
                         }
-
-
                     }
 
 
@@ -232,13 +203,13 @@ public class FightActivity extends AppCompatActivity {
 
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
-                        if (cardsField[i][j]!=null&&cardsField[i][j].cardID==2&&cardsField[i][j].your==false){
+                        if (cardsField[i][j]!=null&&cardsField[i][j].cardID==2&&
+                                cardsField[i][j].your==false){
 
                             for (int z = 0; z < 3; z++) {
                                 for (int p = 0; p < 4; p++) {
                                         if (cardsField[z][p]!=null&&cardsField[z][p].your==false){
                                         cardsField[i][j].wasMove = true;
-
                                         cardsField[z][p].hp -= cardsField[i][j].strength;
                                         if (cardsField[z][p].hp<0){
                                             cardsField[z][p]=null;
@@ -307,21 +278,23 @@ public class FightActivity extends AppCompatActivity {
 
                             }
                         }
-                        if(numberOfEnemyUnitsOnLine>2){
+
+                        /*if(numberOfEnemyUnitsOnLine>2){
                             if (cardsField[i][3]==null||cardsField[i][3]!=null&&
                                     cardsField[i][3].cardID!=4){
                                 cardsField[i][3]=new Cards(fireball,false);
                                 fightField[i][3].setImageResource(R.drawable.magic);
-                            }
+                            }}
+                            */
 
 
-                        }
-                        if (numberOfEnemyUnits>2) {
+                        /*if (numberOfEnemyUnits>2) {
                             if (cardsField[i][3] == null) {
                                 cardsField[i][3] = new Cards(wizard, false);
                                 fightField[i][3].setImageResource(R.drawable.wizard_e);
                             }
-                        }
+                        }*/
+
 
                         //if Player didnt place any units on line
                         if (wasSpawned==false){
@@ -606,32 +579,34 @@ public class FightActivity extends AppCompatActivity {
 
     void botGetDMG(int dmg){
         botsHP-=dmg;
+        TextView EndMessage=findViewById(R.id.new_about_win);
+        Intent toEnd = new Intent(this,EndOfTheGameActivity.class);
         TextView hpOfEnemy = findViewById(R.id.hpOfEnemy);
         hpOfEnemy.setText("Hp: "+botsHP);
         if (botsHP<=0){
-            Toast.makeText(getApplicationContext(),"YOU WON!",Toast.LENGTH_LONG);
-            Intent toMenu = new Intent(this, MainActivity.class);
-            startActivity(toMenu);
+
+            startActivity(toEnd);
         }
 
     }
     void playerGetDMG(int dmg){
+        TextView EndMessage=findViewById(R.id.new_about_win);
+        Intent toEnd = new Intent(this,EndOfTheGameActivity.class);
         playersHP-=dmg;
         TextView hpOfPlayer = findViewById(R.id.hpOfPlayer);
         hpOfPlayer.setText("Hp: "+playersHP);
         if (playersHP<=0){
-            Toast.makeText(getApplicationContext(),"YOU LOSE!",Toast.LENGTH_LONG);
-            Intent toMenu = new Intent(this, MainActivity.class);
-            startActivity(toMenu);
+            startActivity(toEnd);
+
         }
 
     }
     //base cards:
-    Cards knight = new Cards("Knight","", 1, "mellie",5, 2000,3,
-            600, 70,true,false);
+    Cards knight = new Cards("Knight","", 1, "mellie",5, 1400,3,
+            700, 70,true,false);
     Cards wizard = new Cards("Wizard",
             "Usual wizard with stick!",2, "wizard",
-            7,1000,4,300,10,true, false);
+            7,1000,4,500,10,true, false);
     Cards fireball = new Cards("Fire Sharp",
             "the most usual line from fire, what can make good carry ",3, "magic",
             2,1,1,2250,0,true);

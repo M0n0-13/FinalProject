@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 import java.util.Random;
 
+
 public class Cards {
     Random rand=new Random();
     int cardID;
@@ -15,6 +16,8 @@ public class Cards {
     int strength;
     int usualTimeChange;
     boolean wasMove;
+
+
 
 
 
@@ -72,10 +75,7 @@ public class Cards {
     }
 
     public void conservate(){
-
-
         boolean buff=rand.nextBoolean();
-
         if(buff==true){
             if(nowPhase!=phases){
                 nowPhase++;
@@ -93,20 +93,13 @@ public class Cards {
                 up();
             }
         }
-
-
-
     }
     private void up(){
         nowPhase++;
-        strength+=usualTimeChange;
-
-    }
+        strength+=usualTimeChange;}
     private void down(){
         nowPhase--;
-        strength-=usualTimeChange;
-
-    }
+        strength-=usualTimeChange;}
     //base cards:
     /*Cards knight = new Cards("Knight","", 1, "mellie",5, 20003,3,
             700, 75,true);

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#373E3E">
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -14,6 +15,8 @@
             android:layout_width="126dp"
             android:layout_height="59dp"
             android:text="@string/set_Users_name"
+            android:textColor="@color/black"
+            android:backgroundTint="#FF9800"
             tools:layout_editor_absoluteX="22dp"
             tools:layout_editor_absoluteY="622dp" />
         <EditText
@@ -25,7 +28,9 @@
             android:ems="10"
             android:text=""
             tools:layout_editor_absoluteX="166dp"
-            tools:layout_editor_absoluteY="625dp" />
+            tools:layout_editor_absoluteY="625dp"
+            android:textColor="#FF9800"
+            android:shadowColor="#FF9800"/>
 
     </GridLayout>
     <LinearLayout
@@ -36,13 +41,10 @@
             android:id="@+id/start_fight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="start fight"/>
-        <Button
-            android:id="@+id/change_deck"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="change deck"
-            android:visibility="invisible"/>
+            android:text="start fight"
+            android:textColor="@color/black"
+            android:backgroundTint="#FF9800"/>
+
     </LinearLayout>
 
 

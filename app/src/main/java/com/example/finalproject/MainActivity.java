@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Random rand=new Random();
         Intent toFight = new Intent(this, FightActivity.class);
-        Intent toDeck = new Intent(this, DeckActivity.class);
+        Intent toTips = new Intent(this, TipsActivity.class);
         /*String name, String description, int cardID,String type, short phases,
                  double hp, short nowPhase, Bitmap cardArt, double strength,
                  double usualTimeChange*/
@@ -34,13 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         Button setName = findViewById(R.id.set_name);
         Button startFight=findViewById(R.id.start_fight);
-        Button changeDeck=findViewById(R.id.change_deck);
+
         EditText inUsersName=findViewById(R.id.in_name);
 
         startFight.setEnabled(false);
-        changeDeck.setEnabled(false);
+
 
 
         setName.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }else{
                     UsersName =  inUsersName.getText().toString();
-                    /*changeDeck.setEnabled(true);*/
+
                     startFight.setEnabled(true);
                     setName.setVisibility(View.INVISIBLE);
                     setName.setEnabled(false);
@@ -69,18 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        changeDeck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(toDeck);
 
-            }
-        });
 
-        //TODO привязать к кнопкам начала поединка и изменения колоды  соответсвующие активности
-        //TODO создать несколько тестовых карт, доработать Cards со стороны атаки и здоровья(может еще чего-нибудь)
-        //TODO создать возможность игры против ботов
+
+
+
 
 
     }
+
 }
