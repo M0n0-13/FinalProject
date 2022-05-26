@@ -7,7 +7,7 @@
 
     android:background="#373E3E"
     android:orientation="vertical"
-    tools:context=".FightActivity">
+    tools:context=".FightWithBotActivity">
 
 
     <Button

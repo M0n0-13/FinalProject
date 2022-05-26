@@ -13,6 +13,7 @@ public class Cards {
     int hp;
     int nowPhase;
     boolean your=true;
+
     int strength;
     int usualTimeChange;
     boolean wasMove;

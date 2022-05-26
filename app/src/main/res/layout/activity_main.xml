@@ -30,7 +30,9 @@
             tools:layout_editor_absoluteX="166dp"
             tools:layout_editor_absoluteY="625dp"
             android:textColor="#FF9800"
-            android:shadowColor="#FF9800"/>
+            android:shadowColor="#FF9800"
+            android:hint="Enter your name"
+            android:textColorHint="@color/teal_700"/>
 
     </GridLayout>
     <LinearLayout
@@ -41,7 +43,14 @@
             android:id="@+id/start_fight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="start fight"
+            android:text="start fight with bot"
+            android:textColor="@color/black"
+            android:backgroundTint="#FF9800"/>
+        <Button
+            android:id="@+id/start_fight_online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start fight with player"
             android:textColor="@color/black"
             android:backgroundTint="#FF9800"/>
 

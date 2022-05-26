@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.finalproject.localgame.WaitingActivity;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Random rand=new Random();
-        Intent toFight = new Intent(this, FightActivity.class);
+        Intent toFight = new Intent(this, FightWithBotActivity.class);
         Intent toTips = new Intent(this, TipsActivity.class);
+        Intent toWaiting = new Intent(this, WaitingActivity.class);
         /*String name, String description, int cardID,String type, short phases,
                  double hp, short nowPhase, Bitmap cardArt, double strength,
                  double usualTimeChange*/
@@ -35,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Button startFightOnline = findViewById(R.id.start_fight_online);
         Button setName = findViewById(R.id.set_name);
         Button startFight=findViewById(R.id.start_fight);
 
         EditText inUsersName=findViewById(R.id.in_name);
+
 
         startFight.setEnabled(false);
 
@@ -57,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     setName.setVisibility(View.INVISIBLE);
                     setName.setEnabled(false);
                     inUsersName.setEnabled(false);
+                    toWaiting.putExtra("YOUR_NAME",UsersName);
                     Toast.makeText(getApplicationContext(),"Your nickname has been approved",Toast.LENGTH_SHORT).show();
                 }
 
@@ -70,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        startFightOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(toWaiting);
+            }
+        });
+
 
 
 

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class FightActivity extends AppCompatActivity {
+public class FightWithBotActivity extends AppCompatActivity {
     public int chosenColumn = -1;
 
     public static int botsHP = 4000;
@@ -42,7 +42,7 @@ public class FightActivity extends AppCompatActivity {
                  double usualTimeChange*/
 
         ImageView fightField[][]=new ImageView[3][4];
-        DeckActivity DA = new DeckActivity();
+
 
 
 
@@ -59,7 +59,7 @@ public class FightActivity extends AppCompatActivity {
         fightField[0][3] = findViewById(R.id.fight_1s_4e);
         fightField[1][3] = findViewById(R.id.fight_2s_4e);
         fightField[2][3] = findViewById(R.id.fight_3s_4e);
-        TextView EndMessage=findViewById(R.id.new_about_win);
+
         Intent toEnd = new Intent(this,EndOfTheGameActivity.class);
         Cards cardsField[][]= new Cards[3][4];
         stopMove.setOnClickListener(new View.OnClickListener() {

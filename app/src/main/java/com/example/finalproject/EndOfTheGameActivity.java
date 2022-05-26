@@ -27,7 +27,7 @@ public class EndOfTheGameActivity extends AppCompatActivity {
             }
         });
         TextView EndMessage = findViewById(R.id.new_about_win);
-        if(FightActivity.playersHP>=0){
+        if(FightWithBotActivity.playersHP>=0){
             EndMessage.setText("You win!");
 
         }else{
